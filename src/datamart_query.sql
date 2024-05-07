@@ -17,4 +17,5 @@ INSERT INTO analysis.dm_rfm_segments(user_id, recency, frequency, monetary_value
           SELECT trmv.user_id, 0, 0, trmv.monetary_value
           FROM analysis.tmp_rfm_monetary_value trmv
 ) t
-    GROUP BY user_id);
+    GROUP BY user_id
+);
